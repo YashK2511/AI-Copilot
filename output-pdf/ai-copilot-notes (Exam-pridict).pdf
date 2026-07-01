@@ -1,0 +1,990 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 3985
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 799.3703149606299121 Td
+(Here are 5 HIGH and 3 MEDIUM questions based on the transcript:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 759.6852755905511003 Td
+(HIGH) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 720.0002362204724022 Td
+(1. [HIG] What is Python, and why is it considered a high-level language?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 700.15771653543311 Td
+(2. [HIG] What are the main differences between Python 2 and Python) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 680.3151968503937042 Td
+(3?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 660.4726771653542983 Td
+(3. [HIG] What is an expression in programming, and how does it) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 640.6301574803148924 Td
+(produce a value?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 620.7876377952754865 Td
+(4. [HIG] What is the purpose of the `terminal` or `command prompt` in) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 600.9451181102361943 Td
+(Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 581.1025984251967884 Td
+(5. [HIG] What is the difference between a code editor and an Integrated) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 561.2600787401574962 Td
+(Development Environment \(IDE\)?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 521.5750393700786844 Td
+(MEDIUM) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 481.8899999999999295 Td
+(1. [MEDIUM] How can you verify that Python is successfully installed on) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 462.0474803149605805 Td
+(your system?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 442.2049606299212314 Td
+(2. [MEDIUM] What are some of the benefits of using Python for AI,) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 422.3624409448818255 Td
+(machine learning, web development, and automation?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 402.5199212598424765 Td
+(3. [MEDIUM] What is a syntax error in programming, and how does it) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 382.6774015748030706 Td
+(differ from a logical error?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 342.9923622047243725 Td
+(Here are 8 predicted exam questions with their respective probabilities:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 303.3073228346455608 Td
+([HIGH] What is an expression in Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 283.4648031496062686 Td
+([MEDIUM] How does a linter work in Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 243.7797637795274568 Td
+([HIGH] What is the difference between a syntax error and a runtime) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 223.9372440944881646 Td
+(error in Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 204.0947244094487587 Td
+([MEDIUM] How can you use the Len function to get the length of a) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 184.2522047244093528 Td
+(string in Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 144.5671653543306547 Td
+([HIGH] What are the four best practices for naming variables in Python) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 124.7246456692912489 Td
+(as mentioned in the transcript?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 104.882125984251843 Td
+([MEDIUM] How do you use formatted strings to build a string with) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 85.0396062992125508 Td
+(dynamic values in Python?) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 4155
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 799.3703149606299121 Td
+([HIGH] What is the purpose of using an escape character in Python) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 779.5277952755905062 Td
+(strings, and how can you use it to include special characters like double) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 759.6852755905511003 Td
+(quotes or new lines?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 739.8427559055118081 Td
+([MEDIUM] How can you use the upper method to convert a string to) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 720.0002362204724022 Td
+(uppercase in Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 680.3151968503937042 Td
+(Here are the predicted exam questions with their corresponding tags:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 640.6301574803148924 Td
+([HIGH] What is the difference between the `find\(\)` and `in` operators) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 620.7876377952754865 Td
+(when checking for the existence of a character or sequence of) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 600.9451181102361943 Td
+(characters in a string?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 561.2600787401574962 Td
+([MEDIUM] How do you use the `strip\(\)` method to remove leading and) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 541.4175590551180903 Td
+(trailing whitespace from a string, and what are the differences between) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 521.5750393700786844 Td
+(`lstrip\(\)`, `rstrip\(\)`, and `strip\(\)`?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 481.8899999999999295 Td
+([HIGH] What is the purpose of the `replace\(\)` method, and how can it be) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 462.0474803149605805 Td
+(used to replace all occurrences of a character or sequence of characters) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 442.2049606299212314 Td
+(in a string with another value?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 402.5199212598424765 Td
+([MEDIUM] How do you use the `round\(\)` function to round a number to) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 382.6774015748030706 Td
+(the nearest integer, and what are the differences between rounding up) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 362.8348818897637216 Td
+(and down?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 323.1498425196849666 Td
+([HIGH] What is the difference between an `int` and a `float` in Python,) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 303.3073228346455608 Td
+(and how can they be used in arithmetic operations?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 263.6222834645668627 Td
+([MEDIUM] How do you use the `math` module to perform mathematical) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 243.7797637795274568 Td
+(calculations, such as finding the ceiling of a number using `math.ceil\(\)`?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 204.0947244094487587 Td
+([HIGH] What are the differences between the `/` and `//` operators when) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 184.2522047244093528 Td
+(performing division in Python, and what is the purpose of the `modulus`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 164.4096850393699469 Td
+(operator \(`%`\)?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 124.7246456692912489 Td
+([HIGH] How do you use augmented assignment operators to simplify) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 104.882125984251843 Td
+(arithmetic operations, such as incrementing a variable by a certain) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 85.0396062992125508 Td
+(value?) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 4126
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 799.3703149606299121 Td
+(This is a long text about Python programming, specifically covering) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 779.5277952755905062 Td
+(loops \(for loops, while loops\) and functions. Here's a summary of the) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 759.6852755905511003 Td
+(key points:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 720.0002362204724022 Td
+(Loops) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 680.3151968503937042 Td
+(* For loops: used to iterate over a sequence \(e.g., range, list, string\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 660.4726771653542983 Td
+(        + Example: `for x in range\(5\): print\(x\)`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 640.6301574803148924 Td
+(        + Can use `range` function with start, stop, and step arguments) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 620.7876377952754865 Td
+(* While loops: used to repeat a block of code as long as a condition is) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 600.9451181102361943 Td
+(true) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 581.1025984251967884 Td
+(        + Example: `while number > 0: print\(number\); number //= 2`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 561.2600787401574962 Td
+(* Break statement: used to exit a loop prematurely) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 541.4175590551180903 Td
+(* Continue statement: used to skip the rest of the current iteration and) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 521.5750393700786844 Td
+(move on to the next one) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 481.8899999999999295 Td
+(Functions) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 442.2049606299212314 Td
+(* Defining a function: use `def` keyword followed by function name,) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 422.3624409448818255 Td
+(parameters in parentheses, and indentation for code block) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 402.5199212598424765 Td
+(        + Example: `def greet\(name\): print\(f"Hi {name}"\)`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 382.6774015748030706 Td
+(* Calling a function: use function name with arguments in parentheses) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 362.8348818897637216 Td
+(        + Example: `greet\("John"\)`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 342.9923622047243725 Td
+(* Function parameters: can be required or optional \(default values\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 323.1498425196849666 Td
+(        + Example: `def greet\(name, age=30\): ...`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 283.4648031496062686 Td
+(Range Function) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 243.7797637795274568 Td
+(* Returns an iterable object that generates numbers from start to stop) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 223.9372440944881646 Td
+(\(inclusive\) with a specified step size) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 204.0947244094487587 Td
+(        + Example: `range\(1, 10\)` generates numbers 1 through 9) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 164.4096850393699469 Td
+(Infinite Loops) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 124.7246456692912489 Td
+(* Can be created using a while loop with a condition that is always true) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 104.882125984251843 Td
+(        + Example: `while True: ...`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 85.0396062992125508 Td
+(* Use break statement to exit the loop) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 2082
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 799.3703149606299121 Td
+(The text also includes some examples and exercises to practice writing) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 779.5277952755905062 Td
+(Python code.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 739.8427559055118081 Td
+(Here are 5 HIGH and 3 MEDIUM questions based on the transcript:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 700.15771653543311 Td
+([HIGH] What is the default return value of a function in Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 680.3151968503937042 Td
+([MEDIUM] How can we use keyword arguments to make code more) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 660.4726771653542983 Td
+(readable when calling a function with multiple arguments?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 640.6301574803148924 Td
+([HIGH] What is the difference between a list and a tuple in Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 620.7876377952754865 Td
+([MEDIUM] Can you explain how to create a function that takes a) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 600.9451181102361943 Td
+(variable number of arguments using an asterisk \(*\)?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 581.1025984251967884 Td
+([HIGH] Why does indentation matter in Python, especially when it) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 561.2600787401574962 Td
+(comes to return statements within loops?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 541.4175590551180903 Td
+([MEDIUM] How can we use augmented assignment operators to) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 521.5750393700786844 Td
+(simplify code, such as in the example of calculating the product of all) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 501.7325196850393354 Td
+(numbers in a tuple?) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R ]
+/Count 4
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 11 0 R
+/F2 12 0 R
+/F3 13 0 R
+/F4 14 0 R
+/F5 15 0 R
+/F6 16 0 R
+/F7 17 0 R
+/F8 18 0 R
+/F9 19 0 R
+/F10 20 0 R
+/F11 21 0 R
+/F12 22 0 R
+/F13 23 0 R
+/F14 24 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+25 0 obj
+<<
+/Producer (jsPDF 2.5.1)
+/CreationDate (D:20260701215100+05'30')
+>>
+endobj
+26 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 27
+0000000000 65535 f 
+0000015121 00000 n 
+0000016961 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000004189 00000 n 
+0000004326 00000 n 
+0000008533 00000 n 
+0000008670 00000 n 
+0000012848 00000 n 
+0000012986 00000 n 
+0000015196 00000 n 
+0000015322 00000 n 
+0000015453 00000 n 
+0000015587 00000 n 
+0000015725 00000 n 
+0000015849 00000 n 
+0000015978 00000 n 
+0000016110 00000 n 
+0000016246 00000 n 
+0000016374 00000 n 
+0000016501 00000 n 
+0000016630 00000 n 
+0000016763 00000 n 
+0000016865 00000 n 
+0000017214 00000 n 
+0000017300 00000 n 
+trailer
+<<
+/Size 27
+/Root 26 0 R
+/Info 25 0 R
+/ID [ <68CD0187999706BD1DBDC5127FBAA297> <68CD0187999706BD1DBDC5127FBAA297> ]
+>>
+startxref
+17404
+%%EOF

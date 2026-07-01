@@ -1,0 +1,747 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4511
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 799.3703149606299121 Td
+(Here's the compressed version of the notes, condensed to fit within 2) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 779.5277952755905062 Td
+(printed pages \(max 500 words\):) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 739.8427559055118081 Td
+(Python Basics) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 700.15771653543311 Td
+(* Definition: Python is a high-level, multi-purpose programming language) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 680.3151968503937042 Td
+(known for its simplicity and versatility.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 660.4726771653542983 Td
+(* Key Points:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 640.6301574803148924 Td
+(        + Fastest-growing and most popular programming language) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 620.7876377952754865 Td
+(        + Ideal for beginners due to simple syntax and ease of use) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 600.9451181102361943 Td
+(        + Wide range of applications, including data analysis, AI, machine) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 581.1025984251967884 Td
+(learning, web development, automation, etc.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 561.2600787401574962 Td
+(        + Huge community and large ecosystem of libraries, frameworks, and) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 541.4175590551180903 Td
+(tools) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 521.5750393700786844 Td
+(* Short Answer: Python is a versatile language that can be used in) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 501.7325196850393354 Td
+(various fields. Its simplicity and ease of use make it an ideal choice for) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 481.8899999999999295 Td
+(beginners.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 442.2049606299212314 Td
+(Possible Exam Questions:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 422.3624409448818255 Td
+(1. What are the key features of the Python programming language?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 402.5199212598424765 Td
+(2. Why is Python considered an ideal language for beginners?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 382.6774015748030706 Td
+(3. List some areas where Python can be applied in real-world scenarios.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 342.9923622047243725 Td
+(Variables, Strings, and String Methods) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 303.3073228346455608 Td
+(* Definition: Variables store data in computer's memory.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 283.4648031496062686 Td
+(* Key Points:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 263.6222834645668627 Td
+(        + Variables can hold different types of data \(numbers, booleans,) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 243.7797637795274568 Td
+(strings\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 223.9372440944881646 Td
+(        + Strings can be enclosed in single quotes or double quotes) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 204.0947244094487587 Td
+(        + Escape sequences represent special characters in strings) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 184.2522047244093528 Td
+(        + Formatted strings build strings using expressions) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 164.4096850393699469 Td
+(* Short Answer: A variable is a label that refers to a memory location) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 144.5671653543306547 Td
+(where data is stored.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 104.882125984251843 Td
+(Possible Exam Questions:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 85.0396062992125508 Td
+(1. What is the difference between a string enclosed in single quotes and) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 65.1970866141731449 Td
+(double quotes?) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 4419
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 799.3703149606299121 Td
+(2. How do you represent a newline character in a string using escape) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 779.5277952755905062 Td
+(sequences?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 759.6852755905511003 Td
+(3. What is the purpose of the `len\(\)` function in Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 720.0002362204724022 Td
+(String Methods) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 680.3151968503937042 Td
+(* Definition: String methods perform various operations on strings.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 660.4726771653542983 Td
+(* Key Points:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 640.6301574803148924 Td
+(        + `upper\(\)`: Returns string in uppercase) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 620.7876377952754865 Td
+(        + `lower\(\)`: Returns string in lowercase) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 600.9451181102361943 Td
+(        + `title\(\)`: Capitalizes first letter of every word) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 581.1025984251967884 Td
+(        + `strip\(\)`, `lstrip\(\)`, `rstrip\(\)`: Remove white space from strings) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 561.2600787401574962 Td
+(        + `find\(\)`: Returns index of character or sequence of characters) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 541.4175590551180903 Td
+(        + `replace\(\)`: Replaces character or sequence of characters with) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 521.5750393700786844 Td
+(another string) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 501.7325196850393354 Td
+(* Short Answer: A string method is used to manipulate and analyze) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 481.8899999999999295 Td
+(strings.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 442.2049606299212314 Td
+(Possible Exam Questions:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 422.3624409448818255 Td
+(1. What is the output of `print\("Hello World".upper\(\)\)`?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 402.5199212598424765 Td
+(2. How do you remove white space from both ends of a string using) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 382.6774015748030706 Td
+(Python?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 362.8348818897637216 Td
+(3. What is the difference between the `find\(\)` and `in Operator`) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 342.9923622047243725 Td
+(methods?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 303.3073228346455608 Td
+(Functions) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 263.6222834645668627 Td
+(* Definition: A function performs a specific task, which can be executed) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 243.7797637795274568 Td
+(multiple times.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 223.9372440944881646 Td
+(* Key Points:) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 204.0947244094487587 Td
+(        + Functions return values by default \(None\) unless specified otherwise) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 184.2522047244093528 Td
+(        + Functions can carry out tasks or calculate and return values) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 164.4096850393699469 Td
+(        + All functions have parameters, which are required by default but can) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 144.5671653543306547 Td
+(be made optional) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 124.7246456692912489 Td
+(* Short Answer: A function is defined with its own block of code and can) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 104.882125984251843 Td
+(return values or carry out tasks.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 65.1970866141731449 Td
+(Possible Exam Questions:) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 582
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 799.3703149606299121 Td
+(1. What is returned by a function if no value is specified?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 779.5277952755905062 Td
+(2. How do you make a parameter optional in a function?) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 759.6852755905511003 Td
+(3. What is the purpose of using an asterisk \(*\) before a parameter) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+42.5196850393700814 739.8427559055118081 Td
+(name?) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R ]
+/Count 3
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 9 0 R
+/F2 10 0 R
+/F3 11 0 R
+/F4 12 0 R
+/F5 13 0 R
+/F6 14 0 R
+/F7 15 0 R
+/F8 16 0 R
+/F9 17 0 R
+/F10 18 0 R
+/F11 19 0 R
+/F12 20 0 R
+/F13 21 0 R
+/F14 22 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+23 0 obj
+<<
+/Producer (jsPDF 2.5.1)
+/CreationDate (D:20260701214224+05'30')
+>>
+endobj
+24 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 25
+0000000000 65535 f 
+0000010093 00000 n 
+0000011926 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000004715 00000 n 
+0000004852 00000 n 
+0000009323 00000 n 
+0000009460 00000 n 
+0000010162 00000 n 
+0000010287 00000 n 
+0000010418 00000 n 
+0000010552 00000 n 
+0000010690 00000 n 
+0000010814 00000 n 
+0000010943 00000 n 
+0000011075 00000 n 
+0000011211 00000 n 
+0000011339 00000 n 
+0000011466 00000 n 
+0000011595 00000 n 
+0000011728 00000 n 
+0000011830 00000 n 
+0000012178 00000 n 
+0000012264 00000 n 
+trailer
+<<
+/Size 25
+/Root 24 0 R
+/Info 23 0 R
+/ID [ <3CA19E4696EA6C233FF7A3F7DD60FE53> <3CA19E4696EA6C233FF7A3F7DD60FE53> ]
+>>
+startxref
+12368
+%%EOF
