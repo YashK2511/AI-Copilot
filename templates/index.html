@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI-Copilot — YouTube Exam Notes</title>
+  <meta name="description" content="Convert any YouTube video into structured, exam-ready notes using local Llama 3.1."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- marked.js for markdown → HTML rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- jsPDF for PDF download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">🧠</span>
+      <span class="logo-text">AI-Copilot</span>
+    </div>
+    <span class="logo-badge">Powered by Llama 3.1</span>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main class="main">
+    <section class="hero">
+      <h1 class="hero-title">Paste a link.<br/>Get exam notes.</h1>
+      <p class="hero-sub">YouTube video → structured 2-page study notes in seconds. No sign-up. No cloud. Fully local.</p>
+    </section>
+
+    <!-- ===== INPUT CARD ===== -->
+    <div class="input-card">
+
+      <!-- Thumbnail Preview -->
+      <div id="thumbnail-wrap" class="thumbnail-wrap hidden">
+        <img id="thumbnail" src="" alt="Video thumbnail"/>
+        <div class="thumbnail-overlay">
+          <span id="video-label" class="video-label">Video detected ✓</span>
+        </div>
+      </div>
+
+      <!-- URL Input -->
+      <div class="input-row">
+        <input
+          id="url-input"
+          type="text"
+          class="url-input"
+          placeholder="https://www.youtube.com/watch?v=..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="generate-btn" class="generate-btn" onclick="handleGenerate()">
+          <span id="btn-text" class="btn-text">Generate →</span>
+          <span class="btn-spinner hidden" id="btn-spinner"></span>
+        </button>
+      </div>
+
+      <!-- Mode Selector -->
+      <div class="mode-selector">
+        <button class="mode-btn active" data-mode="notes" onclick="setMode(this)">📘 Exam Notes</button>
+        <button class="mode-btn" data-mode="flashcards" onclick="setMode(this)">🧠 Flashcards</button>
+        <button class="mode-btn" data-mode="predict" onclick="setMode(this)">🔥 Exam Predict</button>
+      </div>
+    </div>
+
+    <!-- ===== PROGRESS ===== -->
+    <div id="progress-wrap" class="progress-wrap hidden">
+      <!-- Chunk Progress Bar -->
+      <div id="chunk-info" class="chunk-info hidden">
+        <span id="chunk-text" class="chunk-text">Processing...</span>
+        <div class="chunk-bar-track">
+          <div id="chunk-bar" class="chunk-bar"></div>
+        </div>
+      </div>
+      <div class="progress-steps">
+        <div class="step" id="step-1">
+          <span class="step-icon">📡</span>
+          <span class="step-label">Fetching transcript</span>
+          <span class="step-status" id="s1-status"></span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step-2">
+          <span class="step-icon">🧹</span>
+          <span class="step-label">Cleaning text</span>
+          <span class="step-status" id="s2-status"></span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step-3">
+          <span class="step-icon">🤖</span>
+          <span class="step-label">Generating with Llama 3.1</span>
+          <span class="step-status" id="s3-status"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ERROR BANNER ===== -->
+    <div id="error-banner" class="error-banner hidden">
+      <span id="error-text"></span>
+    </div>
+
+    <!-- ===== OUTPUT ===== -->
+    <div id="output-wrap" class="output-wrap hidden">
+
+      <!-- ⚡ Highlights Bar (Notes mode only) -->
+      <div id="highlights-wrap" class="highlights-wrap hidden">
+        <div class="highlights-header">⚡ Must Memorize</div>
+        <div id="highlights-list" class="highlights-list"></div>
+      </div>
+
+      <!-- 📄 Transcript Preview (collapsible) -->
+      <details id="transcript-details" class="transcript-details hidden">
+        <summary class="transcript-summary">📄 Raw Transcript Preview</summary>
+        <div id="transcript-preview" class="transcript-preview"></div>
+      </details>
+
+      <!-- Notes Card -->
+      <div class="output-card">
+        <div class="output-toolbar">
+          <span class="output-label" id="output-label">📘 Exam Notes</span>
+          <div class="toolbar-actions">
+            <button class="action-btn" onclick="copyNotes()" title="Copy to clipboard">📋 Copy</button>
+            <button class="action-btn" onclick="downloadTxt()" title="Download .txt">⬇ TXT</button>
+            <button class="action-btn" onclick="downloadPdf()" title="Download PDF">⬇ PDF</button>
+          </div>
+        </div>
+        <div id="output-content" class="output-content"></div>
+      </div>
+
+      <!-- Flashcard Player (shown only in flashcard mode) -->
+      <div id="flashcard-wrap" class="flashcard-wrap hidden">
+        <div class="flashcard" id="flashcard" onclick="flipCard()">
+          <div class="card-inner" id="card-inner">
+            <div class="card-face card-front">
+              <div class="card-label">Question</div>
+              <div id="card-question" class="card-text"></div>
+              <div class="card-hint">Click to reveal answer →</div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-label">Answer</div>
+              <div id="card-answer" class="card-text"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flashcard-nav">
+          <button class="nav-btn" onclick="prevCard()">← Prev</button>
+          <span id="card-counter" class="card-counter">1 / 1</span>
+          <button class="nav-btn" onclick="nextCard()">Next →</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>AI-Copilot · Runs locally on Llama 3.1 via Ollama · No data leaves your machine</p>
+  </footer>
+
+<script>
+  // ===== STATE =====
+  let currentMode = "notes";
+  let rawNotes = "";
+  let flashcards = [];
+  let currentCard = 0;
+  let isFlipped = false;
+
+  // ===== THUMBNAIL PREVIEW =====
+  document.getElementById("url-input").addEventListener("input", function () {
+    const url = this.value;
+    const id = extractVideoId(url);
+    if (id) {
+      document.getElementById("thumbnail").src = `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+      document.getElementById("thumbnail-wrap").classList.remove("hidden");
+    } else {
+      document.getElementById("thumbnail-wrap").classList.add("hidden");
+    }
+  });
+
+  function extractVideoId(url) {
+    const patterns = [
+      /(?:v=)([a-zA-Z0-9_-]{11})/,
+      /youtu\.be\/([a-zA-Z0-9_-]{11})/,
+      /\/shorts\/([a-zA-Z0-9_-]{11})/
+    ];
+    for (const p of patterns) {
+      const m = url.match(p);
+      if (m) return m[1];
+    }
+    return null;
+  }
+
+  // ===== MODE SELECTOR =====
+  function setMode(btn) {
+    document.querySelectorAll(".mode-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    currentMode = btn.dataset.mode;
+  }
+
+  // ===== PROGRESS HELPERS =====
+  function showProgress() {
+    document.getElementById("progress-wrap").classList.remove("hidden");
+    ["step-1","step-2","step-3"].forEach(id => {
+      document.getElementById(id).className = "step";
+    });
+    document.getElementById("s1-status").textContent = "";
+    document.getElementById("s2-status").textContent = "";
+    document.getElementById("s3-status").textContent = "";
+  }
+
+  function setStep(num, done) {
+    const el = document.getElementById(`step-${num}`);
+    const status = document.getElementById(`s${num}-status`);
+    if (done) {
+      el.classList.add("done");
+      status.textContent = "✓";
+    } else {
+      el.classList.add("active");
+      status.textContent = "...";
+    }
+  }
+
+  function hideProgress() {
+    document.getElementById("progress-wrap").classList.add("hidden");
+    document.getElementById("chunk-info").classList.add("hidden");
+  }
+
+  // Bonus: Chunk progress bar animation
+  function showChunkProgress(chunkCount) {
+    const info = document.getElementById("chunk-info");
+    const bar = document.getElementById("chunk-bar");
+    const txt = document.getElementById("chunk-text");
+    info.classList.remove("hidden");
+
+    let current = 0;
+    const intervalMs = Math.min(6000, (chunkCount * 2000) / chunkCount); // estimate
+    const tick = setInterval(() => {
+      current++;
+      const pct = Math.min(100, Math.round((current / chunkCount) * 100));
+      bar.style.width = `${pct}%`;
+      txt.textContent = `Processing chunk ${Math.min(current, chunkCount)} of ${chunkCount}...`;
+      if (current >= chunkCount) clearInterval(tick);
+    }, intervalMs);
+  }
+
+  // ===== GENERATE =====
+  async function handleGenerate() {
+    const url = document.getElementById("url-input").value.trim();
+    if (!url) {
+      showError("Please enter a YouTube URL.");
+      return;
+    }
+
+    // Reset UI
+    hideError();
+    hideOutput();
+    showProgress();
+    setBtnLoading(true);
+
+    setStep(1, false);
+
+    try {
+      // Fake step animation (actual steps happen server-side)
+      await delay(800);
+      setStep(1, true);
+      setStep(2, false);
+      await delay(600);
+      setStep(2, true);
+      setStep(3, false);
+
+      const res = await fetch("/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url, mode: currentMode })
+      });
+
+      const data = await res.json();
+
+      setStep(3, true);
+      await delay(300);
+      hideProgress();
+
+      if (data.error) {
+        showError(data.error);
+      } else {
+        rawNotes = data.notes;
+
+        // Bonus: Show chunk progress retroactively
+        if (data.chunk_count) {
+          showChunkProgress(data.chunk_count);
+          await delay(data.chunk_count * 300);
+        }
+
+        // Phase 10: Render highlights (notes mode only)
+        if (data.highlights && data.highlights.length > 0) {
+          renderHighlights(data.highlights);
+        }
+
+        // Bonus: Show transcript preview
+        if (data.transcript_preview) {
+          showTranscriptPreview(data.transcript_preview);
+        }
+
+        renderOutput(data.notes, currentMode);
+      }
+
+    } catch (err) {
+      hideProgress();
+      showError("Network error. Is Flask running?");
+    } finally {
+      setBtnLoading(false);
+    }
+  }
+
+  // ===== PHASE 10: HIGHLIGHTS =====
+  function renderHighlights(highlights) {
+    const wrap = document.getElementById("highlights-wrap");
+    const list = document.getElementById("highlights-list");
+    list.innerHTML = highlights
+      .map(h => `<div class="highlight-item">⚡ ${h}</div>`)
+      .join("");
+    wrap.classList.remove("hidden");
+  }
+
+  // ===== BONUS: TRANSCRIPT PREVIEW =====
+  function showTranscriptPreview(preview) {
+    const details = document.getElementById("transcript-details");
+    const el = document.getElementById("transcript-preview");
+    el.textContent = preview + "...";
+    details.classList.remove("hidden");
+  }
+
+  // ===== RENDER OUTPUT =====
+  function renderOutput(text, mode) {
+    document.getElementById("output-wrap").classList.remove("hidden");
+    document.getElementById("flashcard-wrap").classList.add("hidden");
+    document.getElementById("output-content").classList.remove("hidden");
+
+    const labels = {
+      notes: "📘 Exam Notes",
+      flashcards: "🧠 Flashcards",
+      predict: "🔥 Exam Prediction"
+    };
+    document.getElementById("output-label").textContent = labels[mode] || "Output";
+
+    if (mode === "flashcards") {
+      flashcards = parseFlashcards(text);
+      currentCard = 0;
+      isFlipped = false;
+      if (flashcards.length > 0) {
+        document.getElementById("output-content").classList.add("hidden");
+        document.getElementById("flashcard-wrap").classList.remove("hidden");
+        renderCard();
+      } else {
+        document.getElementById("output-content").innerHTML = marked.parse(text);
+      }
+    } else if (mode === "predict") {
+      // Phase 10: Render HIGH/MEDIUM badges in exam predict mode
+      document.getElementById("output-content").innerHTML = renderPredictBadges(text);
+    } else {
+      document.getElementById("output-content").innerHTML = marked.parse(text);
+    }
+
+    // Scroll to output
+    document.getElementById("output-wrap").scrollIntoView({ behavior: "smooth" });
+  }
+
+  // ===== PHASE 10: EXAM PREDICTION BADGES =====
+  function renderPredictBadges(text) {
+    const lines = text.split("\n").filter(l => l.trim());
+    let html = '<div class="predict-list">';
+    for (const line of lines) {
+      if (line.startsWith("[HIGH]")) {
+        const q = line.replace("[HIGH]", "").trim();
+        html += `<div class="predict-item predict-high"><span class="predict-badge badge-high">🔥 HIGH</span><span class="predict-q">${q}</span></div>`;
+      } else if (line.startsWith("[MEDIUM]")) {
+        const q = line.replace("[MEDIUM]", "").trim();
+        html += `<div class="predict-item predict-medium"><span class="predict-badge badge-medium">⚠️ MEDIUM</span><span class="predict-q">${q}</span></div>`;
+      } else if (line.trim()) {
+        html += `<div class="predict-item"><span class="predict-q">${line}</span></div>`;
+      }
+    }
+    html += "</div>";
+    return html;
+  }
+
+  // ===== FLASHCARD LOGIC =====
+  function parseFlashcards(text) {
+    const cards = [];
+    const blocks = text.split(/Q:/i).filter(b => b.trim());
+    for (const block of blocks) {
+      const parts = block.split(/A:/i);
+      if (parts.length >= 2) {
+        cards.push({
+          q: parts[0].trim(),
+          a: parts.slice(1).join("A:").trim()
+        });
+      }
+    }
+    return cards;
+  }
+
+  function renderCard() {
+    if (!flashcards.length) return;
+    const card = flashcards[currentCard];
+    document.getElementById("card-question").textContent = card.q;
+    document.getElementById("card-answer").textContent = card.a;
+    document.getElementById("card-counter").textContent = `${currentCard + 1} / ${flashcards.length}`;
+    isFlipped = false;
+    document.getElementById("card-inner").style.transform = "";
+  }
+
+  function flipCard() {
+    isFlipped = !isFlipped;
+    document.getElementById("card-inner").style.transform = isFlipped ? "rotateY(180deg)" : "";
+  }
+
+  function nextCard() {
+    if (currentCard < flashcards.length - 1) { currentCard++; renderCard(); }
+  }
+
+  function prevCard() {
+    if (currentCard > 0) { currentCard--; renderCard(); }
+  }
+
+  // Keyboard shortcuts
+  document.addEventListener("keydown", e => {
+    if (document.getElementById("flashcard-wrap").classList.contains("hidden")) return;
+    if (e.code === "Space") { e.preventDefault(); flipCard(); }
+    if (e.code === "ArrowRight") nextCard();
+    if (e.code === "ArrowLeft") prevCard();
+  });
+
+  // ===== ERROR / HELPERS =====
+  function showError(msg) {
+    const banner = document.getElementById("error-banner");
+    document.getElementById("error-text").textContent = msg;
+    banner.classList.remove("hidden");
+  }
+
+  function hideError() {
+    document.getElementById("error-banner").classList.add("hidden");
+  }
+
+  function hideOutput() {
+    document.getElementById("output-wrap").classList.add("hidden");
+    document.getElementById("highlights-wrap").classList.add("hidden");
+    document.getElementById("transcript-details").classList.add("hidden");
+  }
+
+  function setBtnLoading(loading) {
+    const btn = document.getElementById("generate-btn");
+    const text = document.getElementById("btn-text");
+    const spinner = document.getElementById("btn-spinner");
+    btn.disabled = loading;
+    text.classList.toggle("hidden", loading);
+    spinner.classList.toggle("hidden", !loading);
+  }
+
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  // ===== COPY =====
+  function copyNotes() {
+    navigator.clipboard.writeText(rawNotes).then(() => {
+      const btn = event.target;
+      btn.textContent = "✓ Copied!";
+      setTimeout(() => btn.textContent = "📋 Copy", 2000);
+    });
+  }
+
+  // ===== DOWNLOAD TXT =====
+  function downloadTxt() {
+    const blob = new Blob([rawNotes], { type: "text/plain" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "ai-copilot-notes.txt";
+    a.click();
+  }
+
+  // ===== DOWNLOAD PDF =====
+  function downloadPdf() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const lines = doc.splitTextToSize(rawNotes.replace(/\*\*/g, '').replace(/📘|•/g, ''), 180);
+    doc.setFont("helvetica");
+    doc.setFontSize(11);
+    let y = 15;
+    for (const line of lines) {
+      if (y > 280) { doc.addPage(); y = 15; }
+      doc.text(line, 15, y);
+      y += 7;
+    }
+    doc.save("ai-copilot-notes.pdf");
+  }
+
+  // Enter key submits
+  document.getElementById("url-input").addEventListener("keydown", e => {
+    if (e.key === "Enter") handleGenerate();
+  });
+</script>
+
+</body>
+</html>
